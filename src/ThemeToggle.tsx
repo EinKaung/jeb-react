@@ -22,14 +22,14 @@ export default function ThemeToggle() {
 
   return (
     <div className="fixed top-4 right-4 z-50 flex items-center gap-2 text-sm text-[var(--text)]">
-      <span>{isDark ? 'Dark' : 'Light'}</span>
+      <span className="text-[var(--accent)]">{isDark ? 'Dark' : 'Light'}</span>
       <button
         type="button"
         role="switch"
         aria-checked={isDark}
         aria-label="Dark mode"
         onClick={toggleTheme}
-        className="flex h-8 w-14 items-center rounded-full border border-[var(--border)] bg-[var(--code-bg)] p-1 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] aria-checked:bg-[var(--accent)]"
+        className="flex h-8 w-14 items-center rounded-full border border-[var(--border)] bg-[var(--accent)] p-1 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] aria-checked:bg-[var(--accent)]"
       >
         <span
           aria-hidden="true"
